@@ -20,4 +20,3 @@ after_success:
   - docker push sakipgur/multi-nginx
   - docker push sakipgur/multi-server
   - docker push sakipgur/multi-worker
-  
