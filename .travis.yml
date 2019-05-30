@@ -22,7 +22,7 @@ after_success:
   - docker push sakipgur/multi-worker
 
 deploy:
-  provider: elasticbenstalk
+  provider: elasticbeanstalk
   region: us-east-2
   app: multi-docker
   env: MultiDocker-env
