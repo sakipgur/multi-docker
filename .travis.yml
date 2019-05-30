@@ -20,3 +20,16 @@ after_success:
   - docker push sakipgur/multi-nginx
   - docker push sakipgur/multi-server
   - docker push sakipgur/multi-worker
+
+deploy:
+  provider: elasticbenstalk
+  region: us-east-2
+  app: multi-docker
+  env: MultiDocker-env
+  bucket_name: elasticbeanstalk-us-east-2-112569602180
+  bucker_path: multi-docker
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
